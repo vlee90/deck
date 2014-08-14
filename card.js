@@ -10,7 +10,7 @@ function Card(num, suit) {
   this.fname = fname;
 }
 function fname() {
-  return this.num + this.suit + ".gif";
+  return "gif/" + this.num + this.suit + ".gif";
 }
 function DealDraw() {
   if (dealt == true) {
@@ -38,13 +38,13 @@ function Deal() {
   for (i = 1; i < 6; i++) {
     hand[i] = deck[i];
     document.images[i].src = hand[i].fname();
-    document.images[i + 5].src = "hold.gif";
+    document.images[i + 5].src = "gif/hold.gif";
     held[i] = false;
   }
     dealt = true;
     score -= 1;
     document.form1.total.value = score;
-    document.images[11].src = "draw.gif";
+    document.images[11].src = "gif/draw.gif";
     Addscore();
 }
 function Hold(num) {
@@ -53,11 +53,11 @@ function Hold(num) {
   }
   if (!held[num]) {
     held[num] = true;
-    document.images[5 + num].src = "hold2.gif";
+    document.images[5 + num].src = "gif/hold2.gif";
   }
   else {
     held[num] = false;
-    document.images[5 + num].src = "hold.gif";
+    document.images[5 + num].src = "gif/hold.gif";
   }
 }
 function Draw() {
@@ -69,7 +69,7 @@ function Draw() {
     }
   }
   dealt = false;
-  document.images[11].src = "deal.gif";
+  document.images[11].src = "gif/deal.gif";
   score += Addscore();
   document.form1.total.value = score;
 }
