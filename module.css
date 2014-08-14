@@ -1,0 +1,12 @@
+body {
+  text-align: center;
+  background-color: #FFFF99;
+}
+.card-row, .option-row, .title-image{
+  background-color: #19A319;
+}
+.border {
+  border-color: #663300;
+  border-style: ridge;
+  border-radius: 25px;
+}
